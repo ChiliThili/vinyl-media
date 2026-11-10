@@ -1,7 +1,7 @@
-# Tauri + SvelteKit + TypeScript
+# Vinyl Media player
+This is a Media player widget on your desktop that works on windows
+First release coming soon
+# How to compile 
 
-This template should help get you started developing with Tauri, SvelteKit and TypeScript in Vite.
-
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+`npm install`<br>
+`npm run tauri dev`

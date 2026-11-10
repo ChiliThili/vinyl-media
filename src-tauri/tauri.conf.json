@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "windows-widget",
+  "productName": "vinylmedia-widget",
   "version": "0.1.0",
   "identifier": "chilithili",
   "build": {
@@ -13,7 +13,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "Windows Widget",
+        "title": "VinylMedia",
         "width": 320,
         "height": 370,
         "minWidth": 320,

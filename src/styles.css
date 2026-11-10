@@ -1,0 +1,176 @@
+*{
+    background: transparent !important;
+    color: white;
+}
+
+#title{
+    font-size: 20px; 
+    margin-top: 5%;
+    margin-bottom: 2%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.centered{
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#vinyl{ 
+    position: absolute;
+    z-index: 3;
+    background: none;
+    pointer-events: none;
+}
+#vinyl.playing{
+    animation: spin 3s linear infinite;
+}
+
+#vinyloverlay{
+    position: absolute;
+    z-index: 4;
+    background: none;
+    pointer-events: none;
+}
+
+.background{
+    position: absolute;
+    z-index: 1;
+    border-radius: 80px;
+}
+#cover{
+    position: absolute;
+    z-index: 2;
+}
+#cover.playing{
+    animation: spin 3s linear infinite;
+}
+
+.recordplayer{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+}
+
+.onvinyl{
+    animation:  vinylstart 1s linear forwards,
+                onvinyl 180s linear infinite 1s;
+}
+
+.shadow{
+    animation:  shadowstart 1s linear forwards,
+                shadow 180s linear infinite 1s;
+}
+
+.shadowstopped{
+    animation: stoppedshadow 2s ease forwards;
+}
+
+.stopped{
+    animation: stopped 2s ease forwards;
+}
+
+#volume-slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 15px;
+  background: #000;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+
+/* for chrome/safari */
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background: #000;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+/* for firefox */
+#volume-slider::-moz-range-thumb {
+  width: 10px;
+  height: 30px;
+  background: #000;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes onvinyl {
+    from {
+        transform: rotate(-40deg);
+    }
+    to {
+        transform: rotate(-19deg);
+    }
+}
+
+@keyframes shadow {
+    from {
+        transform: rotate(-39deg);
+    }
+    to {
+        transform: rotate(-17deg);
+    }
+}
+
+@keyframes vinylstart {
+    from {
+        transform: rotate(-50deg);
+    }
+    to {
+        transform: rotate(-40deg);
+    }
+}
+
+@keyframes shadowstart {
+    from {
+        transform: rotate(-49.5deg);
+    }
+    to {
+        transform: rotate(-39deg);
+    }
+}
+
+@keyframes stopped {
+    from {
+        transform: rotate(-30deg);
+    }
+    to {
+        transform: rotate(-50deg);
+    }
+}
+
+@keyframes stoppedshadow {
+    from {
+        transform: rotate(-29deg);
+    }
+    to {
+        transform: rotate(-49.5deg);
+    }
+}
